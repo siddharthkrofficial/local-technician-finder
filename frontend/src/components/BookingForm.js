@@ -19,7 +19,7 @@ const BookingForm = () => {
     useEffect(() => {
         const fetchServices = async () => {
             try {
-                const serviceRes = await axios.get('http://localhost:5000/api/services');
+                const serviceRes = await axios.get('https://local-technician-finder-backend.onrender.com/api/services');
                 setServices(serviceRes.data);
             } catch (err) {
                 console.error(err);
@@ -42,7 +42,7 @@ const BookingForm = () => {
                 const selectedService = services.find(s => s._id === selectedServiceId);
                 if (!selectedService) return; // Should not happen if selectedServiceId is valid
 
-                const url = `http://localhost:5000/api/technicians?pincode=${searchPincode}&serviceName=${selectedService.name}`;
+                const url = `https://local-technician-finder-backend.onrender.com/api/technicians?pincode=${searchPincode}&serviceName=${selectedService.name}`;
                 const techRes = await axios.get(url);
                 setTechnicians(techRes.data);
                 // If no technicians found, clear selected technician
@@ -83,7 +83,7 @@ const BookingForm = () => {
         }
 
         try {
-            await axios.post('http://localhost:5000/api/bookings', formData, {
+            await axios.post('https://local-technician-finder-backend.onrender.com/api/bookings', formData, {
                 headers: {
                     'x-auth-token': token
                 }

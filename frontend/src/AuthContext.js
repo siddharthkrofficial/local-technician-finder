@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
             if (token) {
                 setAuthToken(token);
                 try {
-                    const res = await axios.get('http://localhost:5000/api/auth/me');
+                    const res = await axios.get('https://local-technician-finder-backend.onrender.com/api/auth/me');
                     setUser(res.data.user);
                 } catch (err) {
                     console.error('Error loading user:', err);
@@ -38,11 +38,11 @@ export const AuthProvider = ({ children }) => {
 
     const register = async (username, email, password, role) => {
         try {
-            const res = await axios.post('http://localhost:5000/api/auth/register', { username, email, password, role });
+            const res = await axios.post('https://local-technician-finder-backend.onrender.com/api/auth/register', { username, email, password, role });
             localStorage.setItem('token', res.data.token);
             setAuthToken(res.data.token);
             // Fetch user data after successful registration to set user state
-            const userRes = await axios.get('http://localhost:5000/api/auth/me');
+            const userRes = await axios.get('https://local-technician-finder-backend.onrender.com/api/auth/me');
             setUser(userRes.data.user);
             return true;
         } catch (err) {
@@ -54,11 +54,11 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (email, password) => {
         try {
-            const res = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+            const res = await axios.post('https://local-technician-finder-backend.onrender.com/api/auth/login', { email, password });
             localStorage.setItem('token', res.data.token);
             setAuthToken(res.data.token);
             // Fetch user data after successful login to set user state
-            const userRes = await axios.get('http://localhost:5000/api/auth/me');
+            const userRes = await axios.get('https://local-technician-finder-backend.onrender.com/api/auth/me');
             setUser(userRes.data.user);
             return true;
         } catch (err) {

@@ -11,7 +11,7 @@ const TechnicianProfile = () => {
     useEffect(() => {
         const fetchProfile = async () => {
             try {
-                const res = await axios.get(`http://localhost:5000/api/technicians/${id}`);
+                const res = await axios.get(`https://local-technician-finder-backend.onrender.com/api/technicians/${id}`);
                 setProfile(res.data);
                 setLoading(false);
             } catch (err) {

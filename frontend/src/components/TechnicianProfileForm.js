@@ -33,7 +33,7 @@ const TechnicianProfileForm = () => {
                 return;
             }
             try {
-                const res = await axios.get('http://localhost:5000/api/technicians/me', {
+                const res = await axios.get('https://local-technician-finder-backend.onrender.com/api/technicians/me', {
                     headers: { 'x-auth-token': token }
                 });
                 const profileData = res.data;
@@ -70,7 +70,7 @@ const TechnicianProfileForm = () => {
         const servicesArray = formData.servicesOffered.split(',').map(service => service.trim()).filter(service => service !== '');
 
         try {
-            await axios.post('http://localhost:5000/api/technicians', { ...formData, servicesOffered: servicesArray }, {
+            await axios.post('https://local-technician-finder-backend.onrender.com/api/technicians', { ...formData, servicesOffered: servicesArray }, {
                 headers: {
                     'x-auth-token': token
                 }

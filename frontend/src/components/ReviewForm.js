@@ -17,7 +17,7 @@ const ReviewForm = () => {
             const token = localStorage.getItem('token');
             if (!token) return;
             try {
-                const res = await axios.get('http://localhost:5000/api/bookings/my', {
+                const res = await axios.get('https://local-technician-finder-backend.onrender.com/api/bookings/my', {
                     headers: { 'x-auth-token': token }
                 });
                 // Filter for completed bookings that haven't been reviewed yet
@@ -50,7 +50,7 @@ const ReviewForm = () => {
         }
 
         try {
-            await axios.post('http://localhost:5000/api/reviews', formData, {
+            await axios.post('https://local-technician-finder-backend.onrender.com/api/reviews', formData, {
                 headers: {
                     'x-auth-token': token
                 }

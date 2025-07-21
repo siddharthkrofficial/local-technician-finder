@@ -12,8 +12,8 @@ const TechniciansByService = () => {
     const fetchTechnicians = async (pincode = '') => {
         try {
             const url = pincode 
-                ? `http://localhost:5000/api/technicians?serviceName=${serviceName}&pincode=${pincode}` 
-                : `http://localhost:5000/api/technicians?serviceName=${serviceName}`;
+                ? `https://local-technician-finder-backend.onrender.com/api/technicians?serviceName=${serviceName}&pincode=${pincode}` 
+                : `https://local-technician-finder-backend.onrender.com/api/technicians?serviceName=${serviceName}`;
             const res = await axios.get(url);
             setTechnicians(res.data);
             setLoading(false);

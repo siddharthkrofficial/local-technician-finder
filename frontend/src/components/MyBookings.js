@@ -20,7 +20,7 @@ const MyBookings = () => {
             }
 
             try {
-                const res = await axios.get('http://localhost:5000/api/bookings/my', {
+                const res = await axios.get('https://local-technician-finder-backend.onrender.com/api/bookings/my', {
                     headers: {
                         'x-auth-token': token
                     }
@@ -44,14 +44,14 @@ const MyBookings = () => {
         }
 
         try {
-            await axios.put(`http://localhost:5000/api/bookings/${bookingId}/status`, { status: newStatus }, {
+            await axios.put(`https://local-technician-finder-backend.onrender.com/api/bookings/${bookingId}/status`, { status: newStatus }, {
                 headers: {
                     'x-auth-token': token
                 }
             });
             showNotification(`Booking status updated to ${newStatus}!`, 'success');
             // Refresh bookings list
-            const res = await axios.get('http://localhost:5000/api/bookings/my', {
+            const res = await axios.get('https://local-technician-finder-backend.onrender.com/api/bookings/my', {
                 headers: {
                     'x-auth-token': token
                 }
