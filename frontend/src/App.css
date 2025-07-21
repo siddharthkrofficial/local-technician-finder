@@ -1,0 +1,294 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0e0e0; /* Neomorphic background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top */
+    min-height: 100vh;
+}
+
+.App {
+    max-width: 1000px; /* Increased max-width */
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #e0e0e0; /* Match body background */
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff; /* Neomorphic shadow */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Neomorphic Card Style */
+.neomorphic-card {
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+}
+
+/* Neomorphic Button Style (for general buttons and CTAs) */
+.neomorphic-button {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+}
+
+.neomorphic-button:hover {
+    box-shadow: 2px 2px 4px #bebebe, -2px -2px 4px #ffffff;
+    transform: translateY(1px);
+}
+
+.neomorphic-button:active {
+    box-shadow: inset 2px 2px 5px #bebebe, inset -2px -2px 5px #ffffff;
+    transform: translateY(2px);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: transparent; /* Made transparent */
+    padding: 10px 0;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: none; /* Removed shadow from nav ul */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+nav ul li {
+    margin: 0 5px;
+    flex-shrink: 0;
+}
+
+/* Navigation Link/Button Specific Styles */
+nav ul li a,
+nav ul li button {
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 5px;
+    background-color: #e0e0e0; /* Retain background for individual buttons */
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 0.85em;
+    box-shadow: 2px 2px 4px #bebebe, -2px -2px 4px #ffffff; /* Neomorphic shadow for individual buttons */
+    transition: all 0.2s ease-in-out;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+nav ul li a:hover,
+nav ul li button:hover {
+    box-shadow: 1px 1px 2px #bebebe, -1px -1px 2px #ffffff;
+    transform: translateY(0.5px);
+}
+
+nav ul li a:active,
+nav ul li button:active {
+    box-shadow: inset 1px 1px 3px #bebebe, inset -1px -1px 3px #ffffff;
+    transform: translateY(1px);
+}
+
+h1,
+h2 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 15px;
+    background-color: #e0e0e0;
+    box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="datetime-local"],
+form input[type="number"],
+form select,
+form textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #e0e0e0;
+    box-shadow: inset 3px 3px 6px #bebebe, inset -3px -3px 6px #ffffff;
+    outline: none;
+}
+
+form input[type="submit"],
+button {
+    background-color: #e0e0e0;
+    color: #007bff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+    transition: all 0.2s ease-in-out;
+}
+
+form input[type="submit"]:hover,
+button:hover {
+    box-shadow: 2px 2px 4px #bebebe, -2px -2px 4px #ffffff;
+    transform: translateY(1px);
+}
+
+form input[type="submit"]:active,
+button:active {
+    box-shadow: inset 2px 2px 5px #bebebe, inset -2px -2px 5px #ffffff;
+    transform: translateY(2px);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #e0e0e0;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+}
+
+ul li p {
+    margin: 5px 0;
+}
+
+ul li strong {
+    color: #0056b3;
+}
+
+/* Home Page Specific Styles */
+.home-container {
+    padding: 0;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+}
+
+.hero-section h1 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.how-it-works-section {
+    margin-bottom: 30px;
+}
+
+.how-it-works-section h2 {
+    margin-bottom: 25px;
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.step-card {
+    text-align: center;
+    padding: 25px;
+}
+
+.step-card h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.why-choose-us-section ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.why-choose-us-section li {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: inset 3px 3px 6px #bebebe, inset -3px -3px 6px #ffffff;
+    font-weight: 500;
+    color: #444;
+}
+
+.popular-services-section {
+    margin-bottom: 30px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.service-item h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.footer-section {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
